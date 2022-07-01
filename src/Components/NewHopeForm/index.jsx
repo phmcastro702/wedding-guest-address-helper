@@ -61,7 +61,11 @@ const NewHopeForm = () => {
         // console.table(guestData);
 
         try {
-            const setGuestData = await fetch(apiInfo.url + '/api/guest', { method: 'POST', body: JSON.stringify(guestData), headers: { 'Content-Type': 'application/json' } });
+            const setGuestData = await fetch(apiInfo.url + '/api/guest', {
+                method: 'POST',
+                body: JSON.stringify(guestData),
+                headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+            });
             const data = await setGuestData.json();
             setSending(false);
             if (data.success) {
