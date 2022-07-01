@@ -2,16 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { TitleBox } from './Components/TitleBox/index.jsx';
 import { MainForm } from './Components/MainForm/index.jsx';
+import { NewHopeForm } from './Components/NewHopeForm/index.jsx';
+require('dotenv').config();
 
 function App() {
   return (
-    <div className="App">
+    // <div className="App">
       <OurContainer>
         <TitleBox content='Thaís e Paulo' />
-        <OurBackground />
-        <MainForm />
+        <NewHopeForm />
       </OurContainer>
-    </div>
+    // </div>
   );
 }
 
@@ -23,12 +24,21 @@ const OurBackground = styled.div`
 `;
 
 const OurContainer = styled.div`
+    /* height: 100vh; */
+    width: 100%;
+    height: ${window.innerHeight}px;
+    top: 0;
+    bottom: 0;
+    background-color: gold;
+    position: absolute;
 
-    position: relative;
-    text-align: center;
-    display: grid;
-    justify-items: center;
-
+    /* position: relative; */
+    /* text-align: center; */
+    /* display: grid; */
+    /* grid-template-columns: repeat(6, 1fr); */
+    /* grid-template-rows: repeat(6, 1fr); */
+    /* justify-items: center; */
+    /* align-items: center; */
 `;
 
 export default App;

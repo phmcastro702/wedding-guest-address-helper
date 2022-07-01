@@ -13,8 +13,8 @@ const MainForm = () => {
 
     return (
         <FormContainer>
-            <FormBox>
-                <FormTitle>Por favor confirme seu endereço para o envio do convite:</FormTitle>
+             {/* <FormBox> */}
+                {/* <FormTitle>Por favor confirme seu endereço para o envio do convite:</FormTitle> */}
                 <FormBody onSubmit={handleSubmit}>
                     <InputContainer>
                         <p>Nome</p>
@@ -30,22 +30,28 @@ const MainForm = () => {
                     </InputContainer>
                     <SubmitInput type="submit" id="send" />
                 </FormBody>
-            </FormBox>
-        </FormContainer>
+             {/* </FormBox> */}
+         </FormContainer>
     );
 };
 
 
 const FormContainer = styled.div`
 
-    width: 90%;
-    height: 100vh;
-    position: absolute;
+    /* width: 90%; */
+    /* height: 100vh; */
+    /* position: relative; */
     display: grid;
+    /* justify-content: center; */
+    /* align-content: center; */
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    gap: 10px;
-
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    /* gap: 10px; */
+    
 `;
 
 const FormBox = styled.div`
@@ -56,6 +62,7 @@ const FormBox = styled.div`
     border-radius: 45px;
     box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
     margin-top: 40px;
+    position: relative;
 `;
 
 const FormTitle = styled.h3`
@@ -64,10 +71,13 @@ const FormTitle = styled.h3`
 `;
 
 const FormBody = styled.form`
-    display: grid;
-    justify-content: center;
+    /* display: grid; */
+    /* justify-content: center; */
+    /* position: relative; */
     /* align-items: center; */
     /* row-gap: 20px; */
+    grid-column: 3 / 5;
+    grid-row: 4 / 6;
 `;
 
 const FormInput = styled.input`
@@ -76,6 +86,7 @@ const FormInput = styled.input`
     border-top: none;
     border-left: none;
     border-right: none;
+    position: relative;
 
 `;
 

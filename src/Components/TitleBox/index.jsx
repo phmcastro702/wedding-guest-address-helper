@@ -17,7 +17,8 @@ const NoivosTitle = styled.h1`
 
     font-family: 'Dancing Script', cursive;
     font-size: 50px;
-    position: absolute;
+    /* position: relative; */
+    /* grid-column: 3 / 5; */
     
     text-align: center;
 `;
