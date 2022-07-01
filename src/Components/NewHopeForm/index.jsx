@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper, TextField, Button, LinearProgress } from '@material-ui/core';
 import styled from 'styled-components';
+import apiInfo from '../../Assets/info/api.json';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -60,7 +61,7 @@ const NewHopeForm = () => {
         // console.table(guestData);
 
         try {
-            const setGuestData = await fetch('http://192.168.30.148:3002/api/guest', { method: 'POST', body: JSON.stringify(guestData), headers: { 'Content-Type': 'application/json' } });
+            const setGuestData = await fetch(apiInfo.url + '/api/guest', { method: 'POST', body: JSON.stringify(guestData), headers: { 'Content-Type': 'application/json' } });
             const data = await setGuestData.json();
             setSending(false);
             if (data.success) {
