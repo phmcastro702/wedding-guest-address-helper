@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { TitleBox } from './Components/TitleBox/index.jsx';
 import { MainForm } from './Components/MainForm/index.jsx';
 import { NewHopeForm } from './Components/NewHopeForm/index.jsx';
-require('dotenv').config();
 
 function App() {
   return (
